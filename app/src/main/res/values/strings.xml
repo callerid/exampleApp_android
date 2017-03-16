@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CallerID App</string>
+
+    <string name="idleStatus">CallerID App</string>
+
+    <string name="idleLine1">01</string>
+    <string name="idleLine2">02</string>
+    <string name="idleLine3">03</string>
+    <string name="idleLine4">04</string>
+
+    <string name="idleTime">Time</string>
+    <string name="idleNumber">Number</string>
+    <string name="idleName">Name</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="idlePic">Line</string>
+</resources>
