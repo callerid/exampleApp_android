@@ -1,23 +1,17 @@
 package com.callerid.sampleapp;
 
-import android.app.Application;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Binder;
 import android.os.IBinder;
 import android.os.PowerManager;
 
-import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.net.SocketAddress;
-import java.net.SocketException;
 
 public class UDPListen extends Service {
 
@@ -45,17 +39,16 @@ public class UDPListen extends Service {
     @Override
     public void onCreate(){
 
-        // ------------------- NOT WORKING AT THIS TIME --------------------------
+        /* ------------------- NOT WORKING AT THIS TIME --------------------------
         pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         pLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "CIDLock");
         pLock.acquire();
 
-
-        wm = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wLock = wm.createWifiLock(WifiManager.WIFI_MODE_FULL,"CIDWLock");
         wLock.acquire();
 
-        //------------------------------------------------------------------------
+        *///------------------------------------------------------------------------
 
         // Listening thread start
         if(!idle.isAlive()) {

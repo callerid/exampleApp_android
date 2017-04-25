@@ -1,238 +1,265 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sampleAppMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffeef9f9"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/sampleAppMain"
-    android:background="#ffeef9f9">
+    android:visibility="visible"
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1"
         android:layout_below="@+id/lbStatus"
-        android:layout_alignStart="@+id/lbStatus"
-        android:layout_marginTop="31dp">
+        android:layout_marginTop="31dp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/panLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/picLine1"
-                android:src="@mipmap/phoneonhook"
-                android:contentDescription="@string/idlePic"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleLine1"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/idlePic"
+                android:src="@mipmap/phoneonhook"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbLine1"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleLine1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleTime"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbTime1"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleTime"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleNumber"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbNumber1"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleNumber"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleName"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
+                android:text="@string/idleName"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
 
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/panLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/picLine2"
-                android:src="@mipmap/phoneonhook"
-                android:contentDescription="@string/idlePic"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleLine2"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/idlePic"
+                android:src="@mipmap/phoneonhook"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbLine2"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleLine2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleTime"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbTime2"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleTime"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleNumber"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbNumber2"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleNumber"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleName"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
+                android:text="@string/idleName"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/panLine3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/picLine3"
-                android:src="@mipmap/phoneonhook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:contentDescription="@string/idlePic"
-                android:layout_gravity="center_vertical" />
+                android:src="@mipmap/phoneonhook"
+                android:visibility="visible" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleLine3"
                 android:id="@+id/lbLine3"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleLine3"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleTime"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbTime3"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleTime"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleNumber"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbNumber3"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleName"
-                android:id="@+id/lbName3"
+                android:layout_gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
+                android:text="@string/idleNumber"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lbName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleName"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
         </TableRow>
 
         <TableRow
+            android:id="@+id/panLine4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/panLine4"
             android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/picLine4"
-                android:src="@mipmap/phoneonhook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:contentDescription="@string/idlePic"
-                android:layout_gravity="center_vertical" />
+                android:src="@mipmap/phoneonhook"
+                android:visibility="visible" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleLine4"
                 android:id="@+id/lbLine4"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleLine4"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleTime"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbTime4"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleTime"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleNumber"
+                android:visibility="visible" />
+
+            <TextView
                 android:id="@+id/lbNumber4"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/idleName"
-                android:id="@+id/lbName4"
+                android:layout_gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical" />
+                android:text="@string/idleNumber"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lbName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/idleName"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
         </TableRow>
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/lbStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/idleStatus"
-        android:id="@+id/lbStatus"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:text="@string/idleStatus"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 </RelativeLayout>

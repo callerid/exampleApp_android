@@ -1,20 +1,16 @@
 package com.callerid.sampleapp;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Color;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.os.PowerManager;
 import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -22,7 +18,7 @@ import android.widget.TextView;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends Activity implements  ServiceCallbacks{
+public class MainActivity extends Activity implements ServiceCallbacks{
 
     private static TextView lbStatus;
 
@@ -94,9 +90,10 @@ public class MainActivity extends Activity implements  ServiceCallbacks{
     @Override
     protected void onStart() {
         super.onStart();
+
         // bind to Service
         Intent intent = new Intent(this, UDPListen.class);
-        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        mBound = bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 
     }
 
