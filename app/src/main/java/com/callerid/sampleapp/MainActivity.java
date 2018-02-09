@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,6 +27,7 @@ public class MainActivity extends Activity implements ServiceCallbacks{
     private UDPListen mService;
     private boolean mBound = false;
     private String inString = "Waiting for Calls.";
+    private ArrayList<String> previousReceptions;
 
     // Notifications
     static final int uniqueID = 1122334455;
@@ -187,6 +189,24 @@ public class MainActivity extends Activity implements ServiceCallbacks{
     // ----------------------------------------------------------------------
 
     public void updateUI(String inData, boolean visible){
+
+        // Code to ignore duplicates
+        if(previousReceptions.contains(inString)) {
+            // If duplicate, ignore
+            return;
+        }
+        else{
+            // If not duplicate add to check buffer
+            if(previousReceptions.size()>30) {
+                // If check buffer is full, add one to the end and remove oldest
+                previousReceptions.add(inString);
+                previousReceptions.remove(0);
+            }
+            else{
+                // If check buffer not full, simply add to end
+                previousReceptions.add(inString);
+            }
+        }
 
         // Setup variables for use
         String myData = inData;
