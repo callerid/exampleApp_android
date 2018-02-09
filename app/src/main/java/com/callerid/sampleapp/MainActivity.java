@@ -191,7 +191,7 @@ public class MainActivity extends Activity implements ServiceCallbacks{
     public void updateUI(String inData, boolean visible){
 
         // Code to ignore duplicates
-        if(previousReceptions.contains(inString)) {
+        if(previousReceptions.contains(inData)) {
             // If duplicate, ignore
             return;
         }
@@ -199,12 +199,12 @@ public class MainActivity extends Activity implements ServiceCallbacks{
             // If not duplicate add to check buffer
             if(previousReceptions.size()>30) {
                 // If check buffer is full, add one to the end and remove oldest
-                previousReceptions.add(inString);
+                previousReceptions.add(inData);
                 previousReceptions.remove(0);
             }
             else{
                 // If check buffer not full, simply add to end
-                previousReceptions.add(inString);
+                previousReceptions.add(inData);
             }
         }
 
