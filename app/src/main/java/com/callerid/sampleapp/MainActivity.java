@@ -188,6 +188,25 @@ public class MainActivity extends Activity implements ServiceCallbacks{
 
     // ----------------------------------------------------------------------
 
+    private void removeReceptionFromBuffer(String reception){
+
+        ArrayList<Integer> indexes = new ArrayList<>();
+        int cnt = 0;
+
+        for(String pReception : previousReceptions) {
+
+            if(pReception.contains(reception.substring(reception.length()-20))){
+                indexes.add(cnt);
+            }
+            cnt++;
+        }
+
+        for(int i = indexes.size()-1; i >= 0; i--){
+            int remove = indexes.get(i);
+            previousReceptions.remove(remove);
+        }
+    }
+
     public void updateUI(String inData, boolean visible){
 
         // Code to ignore duplicates
@@ -249,6 +268,10 @@ public class MainActivity extends Activity implements ServiceCallbacks{
                 myNumber = matcher.group(9);
                 myName = matcher.group(10);
 
+            }
+
+            if(myIndicator.equals("E")){
+                removeReceptionFromBuffer(inData);
             }
 
         }
